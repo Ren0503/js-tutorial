@@ -20,7 +20,7 @@ Trong Javascript thì **promise** khi mới tạo sẽ có trạng thái là `pe
 
 Bây giờ chúng ta sẽ cùng nhau đi vào tìm hiểu cách tạo một **promise** nhé.
 
-### Cách tạo Promise
+## Cách tạo Promise
 
 Đầu tiên chúng ta sẽ đi vào tìm hiểu cú pháp tổng quát của **promise** ở dưới đây nhé:
 
@@ -102,7 +102,7 @@ Mình có một số lưu ý là khi **promise** đã chuyển sang trạng thá
 
 Do trạng thái và kết quả của đối tượng promise là nội bộ do đó chúng ta không thể sử dụng cách truy cập trực tiếp. Nhưng chúng ta có thể sử dụng các phương thức `.then`, `.catch` và `.finally` để làm điều đó. Để hiểu rõ hơn bạn cùng mình hãy cùng nhau đi vào tìm hiểu nhé.
 
-### Phương thức then
+## Phương thức then
 
 Bây giờ chúng ta sẽ đi vào tìm hiểu cú pháp của nó nhé:
 
@@ -180,7 +180,7 @@ book.then(
 );
 ```
 
-### Phương thức catch
+## Phương thức catch
 
 Nếu như bạn muốn hiển thị lỗi khi đối tượng **promise** ở trạng thái `reject` thì chúng ta có thể sử dụng hai cách sau:
 
@@ -207,7 +207,7 @@ book.then(
 
 ![](.gitbook/assets/phuong-thuc-catch-trong-promise_udax53.png)
 
-### Phương thức finally
+## Phương thức finally
 
 Phương thức `finally()` sẽ trả về một **Promise**. Khi kết quả trả về của **promise** là `fulfilled` \(hoàn thành\) hay `rejected` \(từ chối\) thì đoạn code trong hàm callback của `finally` cũng sẽ được thực thi.
 
@@ -274,7 +274,7 @@ book
    .finally(() => outCome());
 ```
 
-### Promise Chaining JavaScript
+## Promise Chaining JavaScript
 
 Nãy giờ thì chúng ta chỉ học các định nghĩa và phương thức của nó. Phần này chúng ta tìm hiểu về **promise chain** dùng để xử lý bắt đồng bộ trong Javascript giống như **callback function** đã làm được. Bây giờ bạn cùng mình cùng tìm hiểu qua ví dụ để nắm rõ hơn nhé.
 

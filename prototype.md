@@ -4,7 +4,7 @@
 
 Prototype là một khái niệm cơ bản và cốt lõi của ngôn ngữ Javascript, bất kì ai muốn nắm vững ngôn ngữ này đều phải hiểu về khái niệm prototype trong Js. Javascript không kế thừa kiểu class-based mà kế thừa trong Javascript là dựa vào protype \(từ ES5 trở về trước\), điều này khiến prototype trở nên rất quan trọng.
 
-### Prototype là gì 
+## Prototype là gì 
 
 Trước hết, hãy để ý rằng bản thân prototype là một đối tượng object trong JS, được gọi là prototype object \(đối tượng prototype\). \(Cần chú ý điều này để tránh nhầm lẫn với thuộc tính prototype của function\)
 
@@ -24,7 +24,7 @@ Chính bởi 2 khái niệm trên, mà có thể xem mẫu khởi tạo \(constr
 
 ![](.gitbook/assets/image_2021-08-05_093531.png)
 
-### Tạo ra propotype như thế nào?
+## Tạo ra propotype như thế nào?
 
 Như đã nói tới ở trên, do hàm khởi tạo đối tượng cũng được xem là 1 đối tượng prototype, do đó các đơn giản để tạo ra 1 đối tượng prototype là khai báo một hàm khởi tạo:
 
@@ -60,9 +60,9 @@ Ta có cách cách sau để tạo ra object: dùng object literal, dùng constr
 
 Những cách này về mặt cách thức thì khác nhau, nhưng về bản chất chúng đều dùng tới **hàm khởi tạo và các thuộc tính prototype của hàm** này để tạo ra một đối tượng mới: object literal và Object constructor sử dụng Object\(\) và Object.prototype, nếu dùng mẫu khởi tạo thì là mauKhoiTao\(\) và mauKhoiTao.prototype.
 
-### Tại sao prototype lại quan trọng trong Javascript?
+## Tại sao prototype lại quan trọng trong Javascript?
 
-**Thuộc tính prototype của function: cơ chế kế thừa trong Javascript**
+### **Thuộc tính prototype của function: cơ chế kế thừa trong Javascript**
 
 Từ các phiên bản ES5 trở về trước, Javascript không có khái niệm class, và do vậy mà nó không thể thực hiện việc kế thừa để mở rộng ứng dụng như các ngôn ngữ OOP khác. Tuy nhiên, prototype giúp chúng ta thực hiện kế thừa theo một cách gần tương tự như thế: **Javascript thực hiện kế thừa theo cơ chế prototype-based**.
 

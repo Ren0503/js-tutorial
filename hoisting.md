@@ -8,7 +8,7 @@
 
 **Lưu ý là nó chỉ di chuyển khai báo**. Còn việc gán giá trị thì vẫn giữ nguyên. Đây là lưu ý quan trọng, nếu bạn chưa hiểu thì hãy đọc tiếp!
 
-### Biến Hoisting
+## Biến Hoisting
 
 Một vòng đời bình thường của biến trong Javascript là Khai báo =&gt; Gán giá trị =&gt; Sử dụng =&gt; Giải phóng. Ví dụ 
 
@@ -118,7 +118,7 @@ Chúng ta có thể thấy nếu quên việc khai báo biến `hoist` thì Java
 
 Lưu ý là `use strict` mode hoạt động khác nhau ở các trình duyệt khác nhau. Hãy cẩn thận khi dùng `use strict` nhé.
 
-### Hàm Hoisting
+## Hàm Hoisting
 
 Hàm trong Javascript có thể được chia ra làm 2 loại là
 
@@ -151,7 +151,7 @@ var expression = function() {
 
 **Giải thích:** Biến `var expression` vẫn được **hoisting** và được đẩy lên trên cùng của scope nhưng chỉ là khai báo mà thôi, nó không được gán cho hàm! Vì thế nó sẽ ném ra lỗi `TypeError` .
 
-### Thứ tự Hoisting
+## Thứ tự Hoisting
 
 Đây là điều quan trọng khi khai báo các hàm và biến trong Javascript. Thứ tự **Hoisting** được sắp xếp giảm dần như dưới đây.
 

@@ -4,7 +4,7 @@
 
 _Callback là một khái niệm không mới. Tuy nhiên, nó là một trong những khái niệm khá lằng ngoằng và dễ nhầm lẫn trong lập trình. Trong bài viết này chúng ta sẽ tìm hiểu về callback funtion trong javascript, đồng thời học thêm cách tạo và sử dụng callback function trong Javascript từ căn bản đến nâng cao nhé!_
 
-### **Callback Function là gì?**
+## **Callback Function là gì?**
 
 Callback function có thể được hiểu nôm na như sau: callback tức là ta truyền một đoạn code **\(Hàm A\)** này vào một đoạn code khác **\(Hàm B\)**. Tới một thời điểm nào đó, Hàm A sẽ được hàm B gọi lại \(**callback**\)**. Javascript** là một ngôn ngữ **lập trình hướng sự kiện** và **bất đồng bộ** nên **callback function** đóng vai trò rất quan trọng, bạn sẽ truyền một **callback function** vào các sự kiện và xử lý bất đồng bộ đó..
 
@@ -66,7 +66,7 @@ keywords.forEach(function (eachName, index){
 
 Ok bây giờ chắc hẳn bạn đã biết **callback function** là gì rồi phải không nào, nếu vậy thì ta qua phần 2 tìm hiểu cách hoạt động của nó nhé.
 
-### Cách Callback Function hoạt động
+## Cách Callback Function hoạt động
 
 Một hàm hỗ trợ callback function thì chắc chắn trong code xử lý của nó sẽ có gọi đến để thực thi hàm callback đó, nhưng vấn đề nó gọi tại vị trí nào trong hàm là điều chúng ta không hề biết, trừ khi chúng ta tự viết nó. Như ở phần **callback là gì** mình có đưa ra một số ví dụ về truyền tham số cho callback function, các tham số này sẽ phụ thuộc vào hàm cha \(_hàm xử lý chính_\), nếu hàm cha cho phép bạn truyền 3 tham số thì bạn chỉ được truyền 3 tham số, nếu bạn truyền nhiều hơn thì cũng không có tác dụng gì. 
 
@@ -88,9 +88,9 @@ something(doSomething);
 
 Trong ví dụ trên `doSomething` tuy là một hàm, nhưng khi được truyền vào hàm `something()` thì sẽ không có dấu "\(\)" nữa, hàm `something()` muốn thực thi được `doSomething` thì chỉ cần thêm dấu "\(\)" sau tên hàm là được.
 
-### Nguyên tắc khi thực hiện Callback Function
+## Nguyên tắc khi thực hiện Callback Function
 
-#### **1. Tham số truyền vào phải là một function**
+### **1. Tham số truyền vào phải là một function**
 
 Điều này rất quan trọng bởi nếu bạn không kiểm tra giá trị mà người dùng truyền vào là một `function` thì bạn không thể thực thi được, đây là sự khác biệt giữa một lập trình viên non kinh nghiệm và nhiều kinh nghiệm. Xem ví dụ dưới đây để hiểu về cách kiểm tra:
 
@@ -106,7 +106,7 @@ function showPopup(callback) {
 
 Thông qua ví dụ này ta thấy để kiểm tra một biến có phải là function hay không thì ta sử dụng `typeof`, nếu `typeof` có giá trị là "function" thì đó là một `function`.
 
-#### **2. Cẩn thận với this khi hàm callback nằm trong object**
+### **2. Cẩn thận với this khi hàm callback nằm trong object**
 
 Hàm được xây dựng trong Object là hàm được định nghĩa thông qua key của object và giá trị của key là một hàm. Trong ví dụ này hàm `setName` được xây dựng bên trong object `personInfo`
 
@@ -154,7 +154,7 @@ document.write('<br/>');
 document.write(window.name);
 ```
 
-#### **3. Khắc phục this khi hàm callback nằm trong object**
+### **3. Khắc phục this khi hàm callback nằm trong object**
 
 Ở phần trên mình đã đưa ra lưu ý khi sử dụng this trong hàm callback thì this sẽ trỏ tới đối tượng **window** chứ không phải đối tượng chứa hàm `callback`, vậy có cách nào khắc phục tình trạng này không? Có đấy, chúng ta sẽ sử dụng phương thức apply của hàm `callback`. Cú pháp như sau:
 
@@ -191,7 +191,7 @@ test(personInfo.setName, personInfo);
 document.write(personInfo.name);
 ```
 
-#### **4. Callback Hell**
+### **4. Callback Hell**
 
 Như ta đã biết, hàm callback được thực thi bên trong 1 hàm khác, nếu ta tiếp tục có hàm callback bên trong một callback khác thì thế nào? Vòng lặp vô tận “callback bên trong callback bên trong callback … ” sẽ có khả năng xảy ra. Thứ quái quỷ này được gọi là **callback hell** – địa ngục callback, ta sẽ rất hay gặp vấn đề này trong khi xử lí các lệnh bất đồng bộ, kiểu như:
 

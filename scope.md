@@ -17,13 +17,13 @@ Hi vọng sẽ giúp ích cho các bạn khi muốn giải đáp những câu h�
 
 Trước hết, ta sẽ bắt đầu với những khái niệm cơ bản:
 
-## What is scope?
+### What is scope?
 
 Trong JS, scope đề cập đến ngữ cảnh hiện tại trong code của bạn. Scope có thể được xác định trên _toàn cục_ hoặc _cục bộ_. Hiểu về scope trong js là chìa khóa để viết code chống lỗi và trở thành developer tốt hơn. Bạn sẽ hiểu được ở đâu variables/functions có thể được truy cập, có thể thay đổi scope của ngữ cảnh trong code của bạn, nói nôm na là có thể viết code nhanh hơn và dễ maintain hơn, cũng như debug dễ dàng hơn. 
 
 Suy nghĩ về scope dễ dàng như chúng ta đang trong `scope A` hay `scope B`?
 
-## What is global scope?
+### What is global scope?
 
 Trước khi bạn viết một dòng code JS, bạn đang ở nơi mà chúng ta gọi là `global scope`. Nếu chúng ta khai báo một biến, biến đó sẽ được hiểu là biến Global:
 
@@ -42,7 +42,7 @@ jQuery('.myClass');
 
 ... bạn đang truy cập JQuery ở global scope, chúng ta có thể truy cập như một `namespace`. Namespace đôi khi có thể hoán đổi cho từ "scope", thường là đề cập đến scope mức cao nhất. Trong trường hợp này, `jQuery` nằm trong global scope và cũng là namespace của chúng ta. Namespace `jQuery` được định nghĩa trong global scope, hoạt động như một namespace cho thư viện jQuery vì mọi thứ bên trong đều trở thành phần tử con của namespace đó.
 
-## What is local scope?
+### What is local scope?
 
 Local scope đề cập đến bất kỳ scope nào được xác định qua global scope. Có một global scope, và mỗi function định nghĩa bên trong chúng \(nested\) local scope. Bất cứ function nào được định nghĩa bên trong một function khác đều có local scope được kết nối với function bên ngoài. Nếu tôi định nghĩa một function và tạo các biến bên trong nó, các biến đấy trở thành local scope. Ví dụ:
 
@@ -66,7 +66,7 @@ console.log(name);
 
 Kết quả chỉ ra rằng, ở global scope không thể truy cập đến biến `name` local scope bên trong `myFunction()`.
 
-## Function scope
+### Function scope
 
 Tất cả các scope trong JS chỉ được tạo ra bởi `Function scope` , chúng không được tạo ra bởi các vòng lặp `for`, `while` hay bởi các biểu thức như `if`, `switch`. Một function mới = một scope mới, đó là quy tắc. Một ví dụ cho function scope:
 
@@ -80,7 +80,7 @@ var myFunction = function () {
 };
 ```
 
-## Lexial scope
+### Lexial scope
 
 Tiếp theo ta sẽ tìm hiểu về `Lexical scope`. Khi bạn nhìn thấy một function bên trong một function khác, function bên trong có thể truy cập đến scope của function bên ngoài, đó gọi là Lexical Scope hay là Closure - còn được gọi là Static Scope. Ví dụ dưới đây sẽ mô tả điều này:
 
@@ -144,11 +144,11 @@ var scope1 = function () {
 
 Bạn có thể return một tham chiếu đến biến `name` chứ không thể là chính nó.
 
-## Scope Chain
+### Scope Chain
 
 Scope chain thiết lập cho mỗi scope một function nhất định. Mỗi function lại định nghĩa nested scope riêng như ta đã biết, và mỗi function được định nghĩa trong một function khác đều là local scope được liên kết với function bên ngoài - sự kết nối ấy được gọi là chain. Khi giải quyết một biến, JS bắt đầu với scope bên trong, sau đó tìm kiếm dần mở rộng ra bên ngoài cácbiến/object/function cho đến khi chúng được tìm thấy.
 
-## Closures
+### Closures
 
 Closures có mối quan hệ rất chặt chẽ với Lexical scope. Một ví dụ tốt để hiểu làm thế nào mọi thứ bên _Closure_ hoạt động. Có thể thấy khi trả về _function reference_. Bên trong một scope, chúng ta có thể truy cập bất cứ gì đã khai báo ở scope cha:
 
@@ -198,7 +198,7 @@ var $compile = function (template) {
 };
 ```
 
-## Scope and this
+### Scope and this
 
 Mỗi scope sẽ hiểu với một biến `this` khác nhau phụ thuộc vào scope được gọi như thế nào. Có thể bạn đã từng dùng `this` rất nhiều lần, tuy nhiên không chắc bạn đã hiểu hết mỗi `this` khác nhau thế nào khi được gọi. Theo mặc định thì `this` là một biến thuộc global scope, đó là `window`. Chúng ta có thể dễ dàng chỉ ra các functions được gọi thế nào theo nhiều cách liên kết khác nhau biến `this` có giá trị khác nhau:
 
@@ -249,7 +249,7 @@ nav.addEventListener('click', toggleNav, false);
 
 Đây là cách có thể bạn đã thấy, bằng cách này, giá trị mang tính "tạm thời" của `this` đã được giải quyết.
 
-## Changing scope with .call, .apply\(\) and .bind\(\)
+### Changing scope with .call, .apply\(\) and .bind\(\)
 
 Đôi khi bạn cần điều khiển các scope phụ thuộc vào những gì bạn đang tìm kiếm. Một ví dụ mô tả:
 

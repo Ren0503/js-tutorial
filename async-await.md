@@ -7,7 +7,7 @@
 * Thật may mắn, trong phiên bản ES6 , JavaScript đã được bổ xung thêm \( .then\(\) \) Promise. Nó là một thay thế tuyệt vời cho callbacks và hầu hết cộng đồng nhanh chóng chuyển sang sử dụng nó để thay thế cho callbacks. Code mới của chúng ta gần giống với code cũ, kết quả là trông dễ theo dõi và bảo trì hơn. Tuy nhiên các vấn đề của callback vẫn chưa được giải quyết triệt để.
 * Cuối cùng, trong phiên bản ES7 gần đây nhất, Async / Await đã được bổ sung để việc viết code bất đồng bộ trong JavaScript tốt hơn, code dễ nhìn hơn và dễ sử dụng hơn.
 
-### Async / Await là gì?
+## Async / Await là gì?
 
 * **Async / Await** là một tính năng của JavaScript giúp chúng ta làm việc với các hàm bất đồng bộ theo cách thú vị hơn và dễ hiểu hơn. Nó được xây dựng trên Promises và tương thích với tất cả các Promise dựa trên API. Trong đó:
 * **Async** - khai báo một hàm bất đồng bộ \(async function someName\(\){...}\).
@@ -93,7 +93,7 @@ async  function  getABC () {
 
 * Bằng cách này, thời gian thực thi hàm sẽ mất it hơn. Hàm getValueA và getValueC sẽ thực hiện xong trước khi getValueB xong. Thay vì phải mất 9 giây để chờ từng hàm trả về giá trị như trên, chúng ta sẽ chỉ mất 4 giây để chờ cả 3 hàm trả về giá trị.
 
-### Xử lý lỗi trong Async / Await
+## Xử lý lỗi trong Async / Await
 
 * Một điều tuyệt vời khác về Async / Await là nó cho phép chúng ta bắt các lỗi không mong đợi bằng cách sử dụng try / catch. Chúng ta chỉ cần để các await call của chúng ta vào trong khối try/catch như sau:
 
@@ -128,7 +128,7 @@ doSomethingAsync().
 
 * Dựa vào các tình huống cụ thể, chúng ta sẽ sử dụng try/catch hoặc .catch\(\) để bắt và xử lý lỗi. Tuy nhiên, chúng ta không nên sử dụng cả 2 cùng một lúc vì nó có thể dẫn đến các vấn đề không mong muốn.
 
-### Hỗ trợ trình duyệt
+## Hỗ trợ trình duyệt
 
 * Async / Await có thể sử dụng trong hầu hết các trình duyệt chính, ngoại trừ IE11 - tất cả các trình duyệt sẽ nhận ra mã async / await của bạn mà không cần các thư viện bên ngoài.
 * Nếu các bạn dùng Node cũng có sử dụng async từ Node 8 trở lên. Nó sẽ trở thành LTS vào cuối năm nay.

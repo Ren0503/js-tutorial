@@ -6,7 +6,7 @@ Trong Javascript, một trong những khái niệm cốt lõi và cơ bản nh�
 
 Nhắc lại về các kiểu dữ liệu trong Javascript, ta có 5 kiểu dữ liệu cơ bản và 1 kiểu dữ liệu phức hợp. 5 kiểu dữ liệu cơ bản bao gồm: Number, String, Boolean, Undefined và Null. Kiểu dữ liệu phức hợp là kiểu dữ liệu Object. Kiểu dữ liệu Object được sử dụng rất thường xuyên trong Js vì nó rất biến hoá và mạnh mẽ, đây là khái niệm cơ sở cho hàng loạt các đặc điểm nổi bật khác của Javascript, ta hãy thử xem nó là gì nào.
 
-### Object là gì 
+## Object là gì 
 
 Về mặt định nghĩa, một đối tượng \(một object\) là một danh sách các item, mỗi item là một cặp name-value, trong đó value có thể là: các kiểu dữ liệu cơ bản, function, hay cũng có thể là một object khác \(kiểu dữ liệu phức hợp\).
 
@@ -42,11 +42,11 @@ myObject.10;             //Throw Error
 myObject['10'];          //test1
 ```
 
-### Các cách để tạo Object
+## Các cách để tạo Object
 
 Thông thường có hai cách tạo object : **object literals** và **object constructor**.
 
-#### Object literals
+### Object literals
 
 Mình không rõ tiếng Việt gọi ‘literal’ là gì, nhưng đại khái là sẽ dùng cặp ngoặc nhọn “{ }” để tạo một object. ‘Literal’ có thể hiểu theo ngữ cảnh nào đó là việc “sử dụng chuỗi thuần tuý”. Đoạn code sau minh hoạ cho điều này:
 
@@ -61,7 +61,7 @@ var myCar = {
  };
 ```
 
-#### Object constructor
+### Object constructor
 
  Cách này sẽ sử dụng phương thức khởi tạo \(constructor\) của kiểu dữ liệu Object để tạo ra các object. Phương thức khởi tạo này là một hàm để tạo ra các object mới, ta dùng kèm từ khoá `new`:
 
@@ -129,11 +129,11 @@ var appleFruit = new Fruit('red', 'Apple');
 
 Thuộc tính prototype không chỉ được dùng duy nhất trong tình huống này. Do Javascript không phải là ngôn ngữ class-based \(như PHP, C++, C\#, …\) mà là kiểu object-based, do đó chúng ta không thể thực hiện việc tạo class và kế thừa như các ngôn ngữ hướng đối tượng thuần tuý. Tuy nhiên, thuộc tính prototype cho phép ta thực hiện nhiều việc ‘tương tự’ như class và kế thừa trong Javascript, nhưng thôi, ta sẽ bàn chi tiết về nó ở một topic khác.
 
-### Chi tiết về Object
+## Chi tiết về Object
 
  Ta biết rằng Object là kiểu dữ liệu phức hợp trong Javascript, bởi vì phức hợp nên nó sẽ có nhiều điều thú vị.
 
-#### Kiểu dữ liệu tham trị và tham chiếu 
+### Kiểu dữ liệu tham trị và tham chiếu 
 
 Sự khác biệt cơ bản giữa kiểu dữ liệu tham trị và kiểu tham chiếu đó là: giá trị của kiểu dữ liệu tham chiếu được lưu trữ như là **một tham chiếu**, tức là giá trị của biến sẽ không được lưu trực tiếp tại biến, mà biến đó sẽ lưu một tham chiếu tới giá trị thực.
 
@@ -165,7 +165,7 @@ console.log(otherPerson.name);  //Peter
 
 Như đã thấy, mặc dù thay đổi giá trị của biến ‘person’, nhưng giá trị của biến ‘otherPerson’ cũng bị thay đổi. Nguyên do của việc này là bởi các đối tượng Object lưu giá trị theo kiểu tham chiếu, tức là 2 biến này cùng tham chiếu tới 1 giá trị, thay đổi giá trị này sẽ thay đổi giá trị thuộc tính của tất cả những đối tượng khác đang tham chiếu tới nó.
 
-#### Thuộc tính riêng và thuộc tính kế thừa
+### Thuộc tính riêng và thuộc tính kế thừa
 
  Một cách khái quát, thuộc tính riêng \(own property\) là thuộc tính được định nghĩa tại bản thân của đối tượng \(tại bản thân object\), thuộc tính kế thừa \(inherited property\) là những thuộc tính được kế thừa từ đối tượng prototype của object đó. 
 
