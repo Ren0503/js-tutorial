@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Tutorial](README.md)
+* [Introduce](README.md)
 * [Scope](scope.md)
 * [IIFE](iife.md)
 * [Hoisting](hoisting.md)
